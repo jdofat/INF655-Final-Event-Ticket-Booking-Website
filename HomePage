@@ -10,6 +10,9 @@ The app must allow users to:
 5. add tickets to a cart
 6. simulate a booking7. view their booking history through the Profile page
 
+Home page:
+1. List all event cards dynamically (title, date, location, price, thumbnail)
+2. Fetch from static data.js
 
 npx create-react-app ticket-booking
 cd ticket-booking
