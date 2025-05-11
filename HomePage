@@ -1,0 +1,17 @@
+Objective:
+Build a full frontend Event Ticket Booking Website using ReactJS,
+with user authentication and data persistence using Firebase.
+
+The app must allow users to:
+1. sign up
+2. log in
+3. browse events
+4. view event details
+5. add tickets to a cart
+6. simulate a booking7. view their booking history through the Profile page
+
+
+npx create-react-app ticket-booking
+cd ticket-booking
+npm install
+
