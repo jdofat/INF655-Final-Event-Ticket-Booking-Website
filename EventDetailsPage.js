@@ -14,9 +14,30 @@ import { events } from "../data";
 const EventDetailsPage = () => {
   const { id } = useParams();
   const event = events.find((e) => e.id === parseInt(id));
+  const [quantity, setQuantity] = useState(1);
 
   if (!event) return <p>Error</p>;
 
+  const addToCart = () => {
+    const existing = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingIndex = existing.findIndex((item) => item.id === event.id);
+
+    if (existingIndex !== -1) {
+      existing[existingIndex].quantity += quantity;
+    } else {
+      existing.push({
+        id: event.id,
+        title: event.title,
+        price: event.price,
+        quantity: quantity,
+      });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(existing));
+    alert("Added to cart");
+  };
+  
+  
   return (
     <div style={{ padding: "20px" }}>
       <h2>{event.title}</h2>
@@ -37,6 +58,16 @@ const EventDetailsPage = () => {
         ></iframe>
       </div>
 
+ <label>
+        Quantity:{" "}
+        <input
+          type="number"
+          value={quantity}
+          onChange={(e) => setQuantity(parseInt(e.target.value))}
+          style={{ width: "60px" }}
+        />
+ </label>
+          
       <button onClick={() => alert("Added")}>Add to Cart</button>
     </div>
   );
