@@ -3,18 +3,6 @@ Login and Signup Page:
 1. Allow users to register and log in using Firebase Authentication (email/password)
 */
 
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-
-const firebaseConfig = {
-  apiKey: "xxxxx",
-  authDomain: "xxxx.firebaseapp.com",
-  projectId: "xxxx",
-};
-
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-
 import React, { useState } from "react";
 import { auth } from "../firebase/firebaseConfig";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
