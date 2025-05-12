@@ -6,9 +6,9 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "xxx",
-  authDomain: "xxx.firebaseapp.com",
-  projectId: "xxx",
+  apiKey: "AIzaSyCVDYnkuT4ijwS3WLHGQvv2a-QXLs8EYBo",
+  authDomain: "inf655-final-booking-website.firebaseapp.com",
+  projectId: "inf655-final-booking-website",
 };
 
 const app = initializeApp(firebaseConfig);
